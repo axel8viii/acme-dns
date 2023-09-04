@@ -159,7 +159,7 @@ func startHTTPAPI(errChan chan error, config DNSConfig, dnsservers []*DNSServer)
 		},
 	})
 
-	magic := certmagic.New(magicCache, template)
+	magic = certmagic.New(magicCache, template)
 	var err error
 	switch Config.API.TLS {
 	case "letsencryptstaging":
